@@ -381,9 +381,7 @@ const App = () => {
           </div>
         </form>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempora molestiae in, maxime consequatur aperiam repudiandae unde aliquam iusto adipisci asperiores culpa! Doloribus saepe obcaecati tempora earum quis magnam laborum. In voluptate minus aliquid est molestiae omnis nulla assumenda aliquam? Expedita, eius quam. Nisi nobis consequuntur doloribus tenetur itaque dolorem voluptatum, suscipit harum. Ea culpa aliquam voluptatum? Amet, officiis commodi ratione, perferendis omnis quo, provident accusantium nesciunt corporis soluta optio quia eligendi sapiente vitae porro repudiandae a deserunt sequi nostrum? Illo, ipsam asperiores reprehenderit perferendis nostrum labore nesciunt et consequatur voluptatum sunt corrupti quod ab quo nisi nobis eveniet libero iusto alias, molestiae reiciendis ducimus. Nostrum, unde ipsum. Deleniti expedita ipsum labore. Ipsa, consequatur, necessitatibus earum voluptas labore dolores, voluptate soluta sint maiores possimus molestias voluptates. Magni cum fugiat tenetur eveniet illum ut asperiores modi dolorem ea nisi minus molestiae, veniam expedita totam culpa pariatur quisquam. Aliquid sapiente sunt vel exercitationem veniam. Consequatur perferendis aspernatur quos autem officiis non ipsa nihil et laborum dicta porro rerum similique, accusantium nam molestias maxime rem fugiat! Corrupti molestias aut soluta dolor tempore. Recusandae fugit, iste impedit vel voluptas porro eius atque aliquam. Optio eveniet repellendus repellat, doloribus saepe quas laudantium aut non laboriosam?
-      </p>
+
 
     </>
   )

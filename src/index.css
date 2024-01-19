@@ -13,3 +13,18 @@ span {
   font-weight: 600;
   color: black;
 }
+
+p {
+  font-size: 0.7rem;
+}
+
+td,
+th,
+tr {
+  font-size: 0.6rem;
+}
+
+label,
+span {
+  font-size: 0.8rem;
+}
