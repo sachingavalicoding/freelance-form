@@ -130,6 +130,8 @@ section .heading {
   text-align: left;
   font-size: 2rem;
   color: yellow;
+  padding: 10px 15px;
+  font-weight: 700;
 }
 
 .formData__container {
@@ -155,6 +157,7 @@ section .heading {
   border: 1px solid black;
   width: 100%;
   border-bottom: none;
+  overflow-y: hidden;
 }
 
 .form-full-row {
@@ -162,6 +165,7 @@ section .heading {
   display: flex;
   align-items: center;
   justify-content: start;
+  overflow-y: hidden;
 }
 
 .formData__bottom {
@@ -201,6 +205,7 @@ th:nth-child(1),
 td:nth-child(1) {
   width: 20%;
   font-weight: 600;
+  font-size: 0.5rem;
 }
 
 th:nth-child(2),
@@ -214,6 +219,7 @@ th:nth-child(4),
 td:nth-child(4) {
   width: 50%;
   text-align: center;
+  overflow-y: hidden;
 }
 
 tr:nth-child(even) {
@@ -242,7 +248,7 @@ tr:nth-child(even) {
     padding: 0.1rem 0.2rem;
   }
   .form-container {
-    width: 90%;
+    width: 95%;
   }
   .formData__container {
     width: 95%;
@@ -263,4 +269,39 @@ tr:nth-child(even) {
 
 .preview__container {
   width: 100%;
+}
+
+.formData__bottom table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 700px) {
+  th,
+  td {
+    font-size: 0.8rem; /* Adjust the value as needed */
+  }
+}
+@media screen and (max-width: 700px) {
+  th,
+  td {
+    padding: 8px; /* Adjust the value as needed */
+  }
+}
+@media screen and (max-width: 700px) {
+  th:nth-child(1),
+  td:nth-child(1) {
+    width: 30%; /* Adjust the value as needed */
+  }
+
+  th:nth-child(2),
+  td:nth-child(2),
+  td:nth-child(3) {
+    width: 20%; /* Adjust the value as needed */
+  }
+
+  th:nth-child(4),
+  td:nth-child(4) {
+    width: 50%; /* Adjust the value as needed */
+  }
 }

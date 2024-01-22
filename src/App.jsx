@@ -132,24 +132,6 @@ const App = () => {
     e.preventDefault()
   }
 
-  const handleDownload = () => {
-
-    const jsonData = JSON.stringify(formData);
-
-
-    const blob = new Blob([jsonData], { type: 'application/json' });
-
-
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = 'formData.json';
-
-    document.body.appendChild(a);
-    a.click();
-
-
-    document.body.removeChild(a);
-  };
 
   const handlePrint = () => {
     window.print();
@@ -166,8 +148,8 @@ const App = () => {
                 <label htmlFor='obName'>Observer Name </label>
                 <input
                   type='text'
-                  name='name'
-                  value={formData.name}
+                  name='obName'
+                  value={formData.obName}
                   onChange={handleChange}
                   required
                 />
@@ -298,16 +280,18 @@ const App = () => {
 
 
 
-            <button type='submit'>Submit</button>
-
+            <div className='btns__container'>
+              <button type="reset">Reset form </button>
+              <button type='submit'>Submit</button>
+            </div>
           </form>
         </div>
       </div>
       <div className='preview'>
         <form onSubmit={handleSubmitForm} >
           <div className='form-main__heading'>
-            <h1>SOC </h1>
-            <h3> Safety Observations and Conversations </h3>
+            <h3>NORTH KUWAIT EXCAVATION TRANSPORATATION AND REMEDIATION (ZONE-1)</h3>
+            <h3> PROJECT NO. 21056716 </h3>
           </div>
           <div className='formData__container'>
             <div className="formData__top">
@@ -369,14 +353,8 @@ const App = () => {
             </div>
           </div>
           <div className='btns__container'>
-            <button type="button" onClick={handleDownload}>
-              Download
-            </button>
             <button type="button" onClick={handlePrint}>
               Print
-            </button>
-            <button type="submit" onClick={handleSubmitForm}>
-              Submit
             </button>
           </div>
         </form>
