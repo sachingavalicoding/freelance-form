@@ -4,6 +4,8 @@ import { MdCheckBox, MdCheckBoxOutlineBlank } from "react-icons/md";
 import './App.css'
 
 const App = () => {
+
+  const [formFill, setFormFill] = useState(false);
   const [formData, setFormData] = useState({
     obName: '',
     deName: '',
@@ -282,7 +284,7 @@ const App = () => {
 
             <div className='btns__container'>
               <button type="reset">Reset form </button>
-              <button type='submit'>Submit</button>
+              <button onClick={() => setFormFill(true)} type='submit'>Submit</button>
             </div>
           </form>
         </div>
@@ -290,8 +292,9 @@ const App = () => {
       <div className='preview'>
         <form onSubmit={handleSubmitForm} >
           <div className='form-main__heading'>
-            <h3>NORTH KUWAIT EXCAVATION TRANSPORATATION AND REMEDIATION (ZONE-1)</h3>
+            <h3>SOUTH KUWAIT EXCAVATION TRANSPORATATION AND REMEDIATION (ZONE-1)</h3>
             <h3> PROJECT NO. 21056716 </h3>
+            <p> SAFETY OBSERVATION AND CONVERSATION (SOC) </p>
           </div>
           <div className='formData__container'>
             <div className="formData__top">
@@ -353,9 +356,11 @@ const App = () => {
             </div>
           </div>
           <div className='btns__container'>
-            <button type="button" onClick={handlePrint}>
-              Print
-            </button>
+            {
+              formFill ? (<button type="button" onClick={handlePrint}>
+                Print
+              </button>) : ""
+            }
           </div>
         </form>
       </div>
