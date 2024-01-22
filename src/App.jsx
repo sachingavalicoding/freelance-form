@@ -129,6 +129,7 @@ const App = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
+    setFormFill(true);
   }
   const handleSubmitForm = e => {
     e.preventDefault()
@@ -145,6 +146,11 @@ const App = () => {
       <div className='app__container'>
         <div className='form-container'>
           <form onSubmit={handleSubmit}>
+            <div className='form-main__heading'>
+              <h3>SOUTH KUWAIT EXCAVATION TRANSPORATATION AND REMEDIATION (ZONE-1)</h3>
+              <h3> PROJECT NO. 21056716 </h3>
+              <p> SAFETY OBSERVATION AND CONVERSATION (SOC) </p>
+            </div>
             <div className='row'>
               <div>
                 <label htmlFor='obName'>Observer Name </label>
@@ -185,7 +191,6 @@ const App = () => {
                   name='inSheet'
                   value={formData.inSheet}
                   onChange={handleChange}
-                  required
                 />
               </div>
             </div>
@@ -284,7 +289,7 @@ const App = () => {
 
             <div className='btns__container'>
               <button type="reset">Reset form </button>
-              <button onClick={() => setFormFill(true)} type='submit'>Submit</button>
+              <button type='submit'>Submit</button>
             </div>
           </form>
         </div>
