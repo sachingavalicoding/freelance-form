@@ -13,7 +13,7 @@
 form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 4px;
 }
 
 label {
@@ -46,16 +46,16 @@ button:hover {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 5px;
 }
 
 .plant-point {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 5px;
   align-items: center;
   border: 1px solid black;
-  padding: 0.2rem 0.4rem;
+  padding: 0rem 0.4rem;
 }
 
 .plant-point label {
@@ -87,7 +87,7 @@ textarea {
 }
 
 section {
-  margin-top: 1rem;
+  margin-top: 0.4rem;
 }
 
 section .heading {

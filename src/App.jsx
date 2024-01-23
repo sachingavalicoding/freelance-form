@@ -180,7 +180,7 @@ const App = () => {
                   type='number'
                   name='projectNo'
                   value={projectNumber}
-                  required
+                  readOnly
                 />
               </div>
               <div>
