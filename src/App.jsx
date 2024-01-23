@@ -4,7 +4,7 @@ import { MdCheckBox, MdCheckBoxOutlineBlank } from "react-icons/md";
 import './App.css'
 
 const App = () => {
-
+  const projectNumber = 21056718;
   const [formFill, setFormFill] = useState(false);
   const [formData, setFormData] = useState({
     obName: '',
@@ -148,7 +148,7 @@ const App = () => {
           <form onSubmit={handleSubmit}>
             <div className='form-main__heading'>
               <h3>SOUTH KUWAIT EXCAVATION TRANSPORATATION AND REMEDIATION (ZONE-1)</h3>
-              <h3> PROJECT NO. 21056716 </h3>
+              <h3> PROJECT NO. {projectNumber} </h3>
               <p> SAFETY OBSERVATION AND CONVERSATION (SOC) </p>
             </div>
             <div className='row'>
@@ -179,8 +179,7 @@ const App = () => {
                 <input
                   type='number'
                   name='projectNo'
-                  value={formData.projectNo}
-                  onChange={handleChange}
+                  value={projectNumber}
                   required
                 />
               </div>
@@ -295,79 +294,93 @@ const App = () => {
         </div>
       </div>
       <div className='preview'>
-        <form onSubmit={handleSubmitForm} >
-          <div className='form-main__heading'>
-            <h3>SOUTH KUWAIT EXCAVATION TRANSPORATATION AND REMEDIATION (ZONE-1)</h3>
-            <h3> PROJECT NO. 21056716 </h3>
-            <p> SAFETY OBSERVATION AND CONVERSATION (SOC) </p>
-          </div>
-          <div className='formData__container'>
-            <div className="formData__top">
-              <div className="form-row">
-                <p> <span> Observation Name : </span> {formData.obName} </p>
-                <p> <span> Department :</span> {formData.deName} </p>
+
+
+        {
+          formFill ? (
+            <form onSubmit={handleSubmitForm} >
+              <div className='btns__container'>
+                {
+                  formFill ? (<button type="button" onClick={handlePrint}>
+                    Print
+                  </button>) : ""
+                }
               </div>
-              <div className="form-row">
-                <p> <span> Project No : </span> {formData.projectNo} </p>
-                <p> <span> Inspection Sheets :</span> {formData.inSheet} </p>
-              </div>
-              <div className="form-row">
-                <p> <span> Date Occurred : </span>  {formData.dateOcc} </p>
-                <p> <span> Duration:  :</span> {formData.duration} </p>
-              </div>
-              <div className="form-full-row">
-                <p> <span> Location : </span>  {formData.location} </p>
-              </div>
-              <div className="form-full-row">
-                <p> <span>Activity Observed : </span>  {formData.actOb} </p>
-              </div>
-              <div className="form-full-row">
-                <p> <span>Key Safety Conclusions/Comments/Agreements : </span> {formData.keySefety} </p>
-              </div>
-            </div>
-            <div className="formData__bottom">
-              <div>
-                <table>
-                  <thead>
-                    <tr className='table__heading'>
-                      <th>Please enter Safety Observation
-                      </th>
-                      <th>Good
-                        Practice</th>
-                      <th>
-                        Deviation</th>
-                      <th>Comments</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {Object.keys(formData.sections).map((sectionName) => (
-                      <React.Fragment key={sectionName}>
-                        <tr>
-                          <th colSpan="4">{sectionName.charAt(0).toUpperCase() + sectionName.slice(1)}</th>
-                        </tr>
-                        {formData.sections[sectionName].map((point, index) => (
-                          <tr key={index}>
-                            <td>{point.point}</td>
-                            <td>{point.checkbox1 ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}</td>
-                            <td>{point.checkbox2 ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}</td>
-                            <td>{point.comments}</td>
+              <div className='formdata'>
+                <div className='form-main__heading'>
+                  <h3>SOUTH KUWAIT EXCAVATION TRANSPORATATION AND REMEDIATION (ZONE-1)</h3>
+                  <h3> PROJECT NO. 21056718 </h3>
+                  <p> SAFETY OBSERVATION AND CONVERSATION (SOC) </p>
+                </div>
+                <div className='formData__container'>
+                  <div className="formData__top">
+                    <div className="form-row">
+                      <p> <span> Observation Name : </span> {formData.obName} </p>
+                      <p> <span> Department :</span> {formData.deName} </p>
+                    </div>
+                    <div className="form-row">
+                      <p> <span> Project No : </span> {projectNumber} </p>
+                      <p> <span> Inspection Sheets :</span> {formData.inSheet} </p>
+                    </div>
+                    <div className="form-row">
+                      <p> <span> Date Occurred : </span>  {formData.dateOcc} </p>
+                      <p> <span> Duration:  :</span> {formData.duration} </p>
+                    </div>
+                    <div className="form-full-row">
+                      <p> <span> Location : </span>  {formData.location} </p>
+                    </div>
+                    <div className="form-full-row">
+                      <p> <span>Activity Observed : </span>  {formData.actOb} </p>
+                    </div>
+                    <div className="form-full-row">
+                      <p> <span>Key Safety Conclusions/Comments/Agreements : </span> {formData.keySefety} </p>
+                    </div>
+                  </div>
+                  <div className="formData__bottom">
+                    <div>
+                      <table>
+                        <thead>
+                          <tr className='table__heading'>
+                            <th>Please enter Safety Observation
+                            </th>
+                            <th>Good
+                              Practice</th>
+                            <th>
+                              Deviation</th>
+                            <th>Comments</th>
                           </tr>
-                        ))}
-                      </React.Fragment>
-                    ))}
-                  </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                          {Object.keys(formData.sections).map((sectionName) => (
+                            <React.Fragment key={sectionName}>
+                              <tr>
+                                <th className='section__heading' colSpan="4">{sectionName.charAt(0).toUpperCase() + sectionName.slice(1)}</th>
+                              </tr>
+                              {formData.sections[sectionName].map((point, index) => (
+                                <tr key={index}>
+                                  <td>{point.point}</td>
+                                  <td>{point.checkbox1 ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}</td>
+                                  <td>{point.checkbox2 ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}</td>
+                                  <td>{point.comments}</td>
+                                </tr>
+                              ))}
+                            </React.Fragment>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className='btns__container'>
-            {
-              formFill ? (<button type="button" onClick={handlePrint}>
-                Print
-              </button>) : ""
-            }
-          </div>
-        </form>
+
+
+
+
+            </form>
+          )
+            : ""
+        }
+
       </div>
 
 
