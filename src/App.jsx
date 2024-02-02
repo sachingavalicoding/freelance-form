@@ -412,7 +412,7 @@ const App = () => {
           </form>
         </div>
       </div>
-      <div className="preview" id="preview">
+      <div className="preview" >
         {formFill ? (
           <form onSubmit={handleSubmitForm}>
             <div className="btns__container">
@@ -424,7 +424,7 @@ const App = () => {
                 ""
               )}
             </div>
-            <div className="formdata">
+            <div className="formdata" id="preview">
               <div className="form-main__heading">
                 <h3>
                   SOC

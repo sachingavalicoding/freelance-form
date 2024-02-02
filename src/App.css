@@ -318,3 +318,37 @@ tr:nth-child(even) {
   color: black;
   font-weight: 600;
 }
+
+/* Add this to your existing CSS or create a new CSS file */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #preview,
+  #preview * {
+    visibility: visible;
+  }
+
+  #preview {
+    position: absolute;
+    left: 4rem;
+    top: 0;
+  }
+
+  #preview {
+    page-break-before: auto;
+    page-break-after: auto;
+    page-break-inside: avoid;
+  }
+
+  .app__container {
+    display: none;
+  }
+
+  /* Optionally, you can add this rule to ensure that the #preview content stays on a single page */
+
+  @page {
+    size: A4; /* or letter, legal, etc. */
+  }
+}
