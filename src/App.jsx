@@ -4,7 +4,7 @@ import { MdCheckBox, MdCheckBoxOutlineBlank } from "react-icons/md";
 import "./App.css";
 
 const App = () => {
-  const contractNumber = 21056718;
+  const contractNumber = 21056719;
   const [formFill, setFormFill] = useState(false);
   const [formData, setFormData] = useState({
     obName: "",
@@ -250,9 +250,7 @@ const App = () => {
         <div className="form-container">
           <form onSubmit={handleSubmit}>
             <div className="form-main__heading">
-              <h3>
-                SOC
-              </h3>
+              <h3>SOC</h3>
               <p> SAFETY OBSERVATION AND CONVERSATION (SOC) </p>
             </div>
             <div className="row">
@@ -288,7 +286,7 @@ const App = () => {
                 />
               </div>
               <div>
-                <label> Group / Team:  </label>
+                <label> Group / Team: </label>
                 <input
                   type="text"
                   name="inSheet"
@@ -308,7 +306,7 @@ const App = () => {
                 />
               </div>
               <div>
-                <label> Location  </label>
+                <label> Location </label>
                 <input
                   type="text"
                   name="location"
@@ -407,18 +405,18 @@ const App = () => {
 
             <div className="btns__container">
               <button type="reset">Reset form </button>
-              <button type="submit">Submit</button>
+              <button type="submit"> Next </button>
             </div>
           </form>
         </div>
       </div>
-      <div className="preview" >
+      <div className="preview">
         {formFill ? (
           <form onSubmit={handleSubmitForm}>
             <div className="btns__container">
               {formFill ? (
                 <button type="button" onClick={handlePrint}>
-                  Print
+                  Next
                 </button>
               ) : (
                 ""
@@ -426,9 +424,7 @@ const App = () => {
             </div>
             <div className="formdata" id="preview">
               <div className="form-main__heading">
-                <h3>
-                  SOC
-                </h3>
+                <h3>SOC</h3>
                 <p> SAFETY OBSERVATION AND CONVERSATION (SOC) </p>
               </div>
               <div className="formData__container">
@@ -450,7 +446,7 @@ const App = () => {
                     </p>
                     <p>
                       {" "}
-                      <span> Group / Team  :</span> {formData.inSheet}{" "}
+                      <span> Group / Team :</span> {formData.inSheet}{" "}
                     </p>
                   </div>
                   <div className="form-row">
@@ -460,7 +456,7 @@ const App = () => {
                     </p>
                     <p>
                       {" "}
-                      <span> Location  :</span> {formData.location}{" "}
+                      <span> Location :</span> {formData.location}{" "}
                     </p>
                   </div>
                   <div className="form-row">
@@ -477,16 +473,13 @@ const App = () => {
                   <div className="form-full-row">
                     <p>
                       {" "}
-                      <span>Type of Work  Observed : </span> {formData.actOb}{" "}
+                      <span>Type of Work Observed : </span> {formData.actOb}{" "}
                     </p>
                   </div>
                   <div className="form-full-row">
                     <p>
                       {" "}
-                      <span>
-
-                      </span>{" "}
-                      {formData.keySefety}{" "}
+                      <span></span> {formData.keySefety}{" "}
                     </p>
                   </div>
                 </div>
