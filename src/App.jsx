@@ -297,26 +297,6 @@ const App = () => {
             </div>
             <div className="row">
               <div>
-                <label> Contract NO : </label>
-                <input
-                  type="number"
-                  name="contractNo"
-                  value={contractNumber}
-                  readOnly
-                />
-              </div>
-              <div>
-                <label> Location </label>
-                <input
-                  type="text"
-                  name="location"
-                  value={formData.location}
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div>
                 <label>Date Occurred </label>
                 <input
                   type="date"
@@ -334,6 +314,17 @@ const App = () => {
                   value={formData.duration}
                   onChange={handleChange}
                   required
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div>
+                <label> Location </label>
+                <input
+                  type="text"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -449,16 +440,7 @@ const App = () => {
                       <span> Group / Team :</span> {formData.inSheet}{" "}
                     </p>
                   </div>
-                  <div className="form-row">
-                    <p>
-                      {" "}
-                      <span> Contract No : </span> {contractNumber}{" "}
-                    </p>
-                    <p>
-                      {" "}
-                      <span> Location :</span> {formData.location}{" "}
-                    </p>
-                  </div>
+
                   <div className="form-row">
                     <p>
                       {" "}
@@ -474,6 +456,10 @@ const App = () => {
                     <p>
                       {" "}
                       <span>Type of Work Observed : </span> {formData.actOb}{" "}
+                    </p>
+                    <p>
+                      {" "}
+                      <span>location </span> {formData.location}{" "}
                     </p>
                   </div>
                   <div className="form-full-row">
