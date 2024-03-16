@@ -4,7 +4,7 @@ import { MdCheckBox, MdCheckBoxOutlineBlank } from "react-icons/md";
 import "./App.css";
 
 const App = () => {
-  const contractNumber = 21056719;
+  const group = "SRP-I";
   const [formFill, setFormFill] = useState(false);
   const [formData, setFormData] = useState({
     obName: "",
@@ -287,12 +287,7 @@ const App = () => {
               </div>
               <div>
                 <label> Group / Team: </label>
-                <input
-                  type="text"
-                  name="inSheet"
-                  value={formData.inSheet}
-                  onChange={handleChange}
-                />
+                <input type="text" name="inSheet" value={group} readOnly />
               </div>
             </div>
             <div className="row">
@@ -437,7 +432,7 @@ const App = () => {
                     </p>
                     <p>
                       {" "}
-                      <span> Group / Team :</span> {formData.inSheet}{" "}
+                      <span> Group / Team :</span> {group}{" "}
                     </p>
                   </div>
 
@@ -465,7 +460,11 @@ const App = () => {
                   <div className="form-full-row">
                     <p>
                       {" "}
-                      <span></span> {formData.keySefety}{" "}
+                      <span>
+                        {" "}
+                        Key Sefety Conclusions/Comments/Agreements Made :{" "}
+                      </span>{" "}
+                      {formData.keySefety}{" "}
                     </p>
                   </div>
                 </div>
@@ -474,7 +473,10 @@ const App = () => {
                     <table>
                       <thead>
                         <tr className="table__heading">
-                          <th>Please enter Safety Observation</th>
+                          <th>
+                            Please enter Safety Observation Out of four Areas
+                            below Check only when applicable{" "}
+                          </th>
                           <th>Good Practice</th>
                           <th>Deviation</th>
                           <th>Comments</th>
