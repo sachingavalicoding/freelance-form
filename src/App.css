@@ -116,6 +116,7 @@ section .heading {
   align-items: center;
   background-color: #45a049;
   width: 100%;
+  padding: 0.3rem;
 }
 .form-main__heading P {
   width: 90%;
@@ -138,7 +139,7 @@ section .heading {
   width: 90%;
   border: 1px solid black;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 0.1rem;
 }
 
 .formData__top {

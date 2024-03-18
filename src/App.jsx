@@ -156,7 +156,7 @@ const App = () => {
           comments: "",
         },
         {
-          point: "9. Change managed safely , systematic",
+          point: "9. Change managed safely",
           checkbox1: false,
           checkbox2: false,
           comments: "",
@@ -250,7 +250,10 @@ const App = () => {
         <div className="form-container">
           <form onSubmit={handleSubmit}>
             <div className="form-main__heading">
-              <h3>SOC</h3>
+              <div className="logo">
+                <h3>SOC</h3>
+                <img src="/soc-logo.png" alt="" />
+              </div>
               <p> SAFETY OBSERVATION AND CONVERSATION (SOC) </p>
             </div>
             <div className="row">
@@ -338,7 +341,10 @@ const App = () => {
               onChange={handleChange}
               required
             ></textarea>
-
+            <label className="label">
+              Please enter Safety Observation Out of four Areas below Check only
+              when applicable{" "}
+            </label>
             {Object.keys(formData.sections).map((sectionName) => (
               <section key={sectionName} className="section">
                 <h2 className="heading">
@@ -410,7 +416,10 @@ const App = () => {
             </div>
             <div className="formdata" id="preview">
               <div className="form-main__heading">
-                <h3>SOC</h3>
+                <div className="logo">
+                  <h3>SOC</h3>
+                  <img src="/soc-logo.png" alt="" />
+                </div>
                 <p> SAFETY OBSERVATION AND CONVERSATION (SOC) </p>
               </div>
               <div className="formData__container">

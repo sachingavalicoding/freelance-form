@@ -28,3 +28,23 @@ label,
 span {
   font-size: 0.5rem;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.logo h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: yellow;
+}
+
+.logo img {
+  width: 90px;
+}
+
+.label {
+  margin-top: 1rem;
+}
